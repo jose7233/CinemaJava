@@ -33,6 +33,7 @@ public class CinemaJava {
         mainloop:
 
         while (inc) {
+
             for (int i = 0; i < matriz.getNombres().length; i++) {
                 for (int j = 0; j < matriz.getNombres()[i].length; j++) {
                     System.out.println(" ");
@@ -76,13 +77,24 @@ public class CinemaJava {
                             case 1:
 
                                 System.out.println();
-                                System.out.println("¿Quieres asignar este asiento? " + matriz.getNombres()[i][j] + " ");
+                                System.out.println("¿Quieres asignar este asiento? " + matriz.getNombres()[i][j] + " "); // el proble esta aqui
                                 System.out.println("1. Si" + "\n" + "2. No");
                                 int asiento = sc.nextInt();
 
                                 if (asiento == 1) {
                                     asientosComprados.add(matriz.getNombres()[i][j]);
                                     System.out.println("Asiento comprado correctamente");
+                                    //esto suma una columna y si la columna J llega al borde de la matriz, va a sumar una fila y la columna vuelve a cer cero
+                                    j++;
+                                    if(j >= matriz.getNombres().length) {
+                                        i++;
+                                        j=0;
+                                    }
+                                    // y si tanto columna como fila, llegan al borde, ambas vuelven a ser cero, haciendo que el recorrido se reinicie
+                                    if(i >= matriz.getNombres().length) {
+                                        i = 0;
+                                        j=0;
+                                    }
                                 } else if (asiento == 2) {
 
                                     System.out.println("nombre de la pelicula: " + pelicula.getTitulo());
