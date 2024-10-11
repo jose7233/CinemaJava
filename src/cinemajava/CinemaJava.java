@@ -21,7 +21,7 @@ public class CinemaJava {
         System.out.println("el costo de la pelicula es: " + pelicula.getCosto());
         System.out.println();
 
-        //atraer xd
+
         Scanner sc = new Scanner(System.in);
         Matriz matriz = new Matriz();
         List<String> asientosComprados = new ArrayList<>();
@@ -77,7 +77,7 @@ public class CinemaJava {
                             case 1:
 
                                 System.out.println();
-                                System.out.println("¿Quieres asignar este asiento? " + matriz.getNombres()[i][j] + " "); // el proble esta aqui
+                                System.out.println("¿Quieres asignar este asiento? " + matriz.getNombres()[i][j] + " ");
                                 System.out.println("1. Si" + "\n" + "2. No");
                                 int asiento = sc.nextInt();
 
