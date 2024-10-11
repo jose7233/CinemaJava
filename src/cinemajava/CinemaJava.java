@@ -107,7 +107,7 @@ public class CinemaJava {
                                     System.out.println("dinero: " + cantidad);
                                     System.out.println();
                                     System.out.println("Compraste los siguientes asientos: " + asientosComprados + "\n");
-                                    System.out.println("gracias por tu compra, vuelve pronto");
+                                    System.out.println("gracias por tu compra, vuelve pronto.");
                                     pdf = false;
 
                                 }
